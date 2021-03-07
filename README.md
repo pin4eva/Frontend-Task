@@ -5,7 +5,7 @@ Please stick to the following instructions on how to submit your application:
 3. Add your solution to your repository
 4. Create a pull request to our repository
 
-Also note down in the end how many hours it took to complete (roughly). **Please do not spend more than 6 hours for the whole task.**
+Also note down in the end how many hours it took to complete (roughly). **Please do not spend more than 4 hours for the whole task.** Submitting your solution earlier is a bonus.
 
 Thank you very much!
 
