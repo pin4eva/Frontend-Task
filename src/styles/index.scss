@@ -1,0 +1,79 @@
+@import "./variables";
+@import "./helpers";
+@import "./header";
+@import "./resets";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+#root {
+  width: 100%;
+}
+
+.sidebar {
+  background-color: $gray1;
+  width: 100%;
+  max-width: 16rem;
+  height: inherit;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+
+  &-aside {
+    @extend .sidebar;
+    // @extend .container;
+    .nav {
+      li {
+        margin: 1rem 0;
+      }
+    }
+  }
+  .wrapper {
+    flex: 1;
+    display: flex;
+
+    @media screen and (min-width: 768px) {
+      .dashboard-main {
+        // background-color: $gray1;
+        margin-left: 1rem;
+      }
+    }
+  }
+  &-main {
+    flex: 1;
+    // @extend .container;
+  }
+}
+
+.card {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  img {
+    width: 100%;
+  }
+  .profile {
+    img {
+      width: 100%;
+      max-width: 9rem;
+      height: 9rem;
+      border-radius: 100%;
+    }
+  }
+  &.flat {
+    box-shadow: unset;
+  }
+}

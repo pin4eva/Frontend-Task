@@ -1,0 +1,117 @@
+$grid-count: 2 3 4 5 6;
+
+.c-hand {
+  cursor: pointer;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    max-width: 750px;
+  }
+  @media (min-width: 992px) {
+    max-width: 970px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1170px;
+  }
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.d-flex {
+  display: flex;
+
+  &.flex-column {
+    flex-direction: column;
+  }
+}
+
+.nav {
+  @extend .d-flex;
+  &-link {
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &-item {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@each $count in $grid-count {
+  .grid-#{$count} {
+    @extend .grid;
+    grid-template-columns: repeat($count, 1fr);
+    gap: 1rem;
+
+    @media (min-width: 768px) and (max-width: 920px) {
+      grid-template-columns: repeat($count - 2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+    }
+  }
+}
+
+// Margins
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.ml-1 {
+  margin-left: 0.5rem;
+}
+.ml-2 {
+  margin-left: 1rem;
+}
+
+.mr-1 {
+  margin-right: 0.5rem;
+}
+.mr-2 {
+  margin-right: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+// colors
+
+.bg-gray {
+  background-color: $gray1;
+}
+
+.text-primary {
+  color: $primary;
+}
